@@ -1,0 +1,22 @@
+<div class="sidebar">
+  <ul class="sidebar-links">
+    <li>
+      {% assign folders = site.collections | sort: 'order' %}
+      {% for folder in folders %}
+        {% if folder.label != "posts" %}
+      <div class="sidebar-group">
+        <strong class="sidebar-heading open">{{ folder.title }}</strong>
+        <ul class="sidebar-group-items">
+          {% assign docs = folder.docs | sort: 'chapter' %}
+          {% for doc in docs %}
+          <li>
+            <a href="{{doc.url}}" class="sidebar-link{% if page.url == doc.url %} active{% endif %}">{{ doc.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+        {% endif %}
+      {% endfor %}
+  </ul>
+</div>
+<div class="sidebar-mask"></div>

@@ -1,0 +1,57 @@
+.sidebar-button {
+  display: none; width: 1.25rem; height: 1.25rem; position: absolute; padding: .6rem; top: .6rem; left: 1rem;
+  & .icon {display: block; width: 1.25rem; height: 1.25rem }
+}
+@media (max-width: 719px) {
+  .sidebar-button {display:block;}
+}
+
+.sidebar {
+  font-size: 15px; background-color: #fff; width: 20rem; position: fixed; z-index: 10; margin: 0; top: 3.6rem; left: 0; bottom: 0; box-sizing: border-box; border-right: 1px solid #eaecef; overflow-y: auto;transition: transform .2s ease;
+  & .sidebar-links { padding: 1.5rem 0;}
+  & ul { padding: 0; margin: 0; list-style-type: none; }
+  & a {display: inline-block;}
+  & .nav-links { display: none; border-bottom: 1px solid #eaecef; padding: .5rem 0 .75rem 0;
+    & a {font-weight: 600}
+    & .nav-item,
+    & .repo-link {display: block; line-height: 1.25rem; font-size: 1.1em; padding: .5rem 0 .5rem 1.5rem;}
+    }
+}
+
+.sidebar-heading {
+  color: #999; transition: color .15s ease; font-size: 1.1em; font-weight: 700; padding: 0 1.5rem; margin-top: 0; margin-bottom: .5rem;
+  &.open,
+  &:hover {color: inherit;}
+}
+
+a.sidebar-link {
+  font-weight: 400; display: inline-block; color: #2c3e50; border-left: .25rem solid transparent; padding: .35rem 1rem .35rem 1.25rem; line-height: 1.4; width: 100%; box-sizing: border-box;
+  &:hover {color: $color1}
+  &.active {font-weight: 600;color: $color1;border-left-color: $color1;}
+}
+
+.sidebar-group a.sidebar-link {
+  padding-left: 2rem;
+}
+
+.sidebar-sub-headers a.sidebar-link {
+  padding-top: .25rem; padding-bottom: .25rem; border-left: none;
+  &.active {font-weight: 500;}
+}
+
+.sidebar-mask {
+  top: 0;left:0;position: fixed; z-index: 9;
+  width: 100vw; height: 100vh; display: none;
+}
+
+
+@media (max-width: 719px) {
+  .sidebar {
+    top: 0!important;
+    & .nav-links { display:block;}
+    & .nav-links .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active:after {top: calc(1rem - 2px)}
+  }
+  .sidebar-links { padding: 1rem 0;}
+  .sidebar-open .sidebar { transform: translateX(0)}
+  .no-navbar .sidebar {padding-top: 0}
+}

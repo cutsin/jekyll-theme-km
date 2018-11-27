@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  # Development
+  km-development:
+    build:
+      context: ./Docker
+      dockerfile: ./Dockerfile
+      target: dev
+    image: jekyll-dev
+    ports:
+      - 9220:80
+      - 9221:4000
+    volumes:
+       - .:/code
+    privileged: true
+    stdin_open: true
+    tty: true
+    container_name: km

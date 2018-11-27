@@ -1,0 +1,30 @@
+# Variables of template's `site.*` scope
+title: Awesome Wiki
+
+# Articles
+collections:
+  docs:
+    title: Documentation
+    order: 1
+    output: true
+  api:
+    title: API
+    order: 2
+    type: pages
+    output: true
+
+# Jekyll Folders
+# source: ./themes/km/
+collections_dir: ./collections
+layouts_dir: ./themes/km/layout
+includes_dir: ./themes/km/layout
+sass:
+  sass_dir: ./themes/km/css
+  style: compressed
+# Jekyll Settings
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      layout: default

@@ -1,0 +1,19 @@
+
+.sidebar-open .sidebar-mask { display: block;}
+
+@media (max-width: 959px) {
+  .sidebar { font-size:15px; width: 16.4rem }
+}
+
+@media (min-width: 720px) {
+  .no-sidebar {
+    & .sidebar { display:none;}
+    & .page {padding-left: 0}
+  }
+}
+@media (max-width: 719px) {
+  .sidebar {
+    top:0; padding-top: 3.6rem;transform: translateX(-100%);
+  }
+  .no-navbar .sidebar {padding-top: 0}
+}

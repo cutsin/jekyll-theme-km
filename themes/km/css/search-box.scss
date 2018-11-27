@@ -1,0 +1,55 @@
+.search-box {
+  flex: 0 0 auto; vertical-align: top;
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+  & input {
+    width: 10rem; color: #4e6e8e; display: inline-block; border: 1px solid #cfd4db; border-radius: 2rem; font-size: .9rem; line-height: 2rem; padding: 0 .5rem 0 2rem; outline: none; transition: all .2s ease; background: #fff url($base-url + 'images/1.svg') .6rem .5rem no-repeat; background-size: 1rem;
+    &:focus { cursor: auto; border-color: $color1;}
+  }
+  & .suggestions {
+    background: #fff; width: 20rem; position: absolute; top: 1.5rem; border: 1px solid #cfd4db; border-radius: 6px; padding: .4rem; list-style-type: none;
+    &.align-right {right:0;}
+  }
+  & .suggestion {
+    line-height: 1.4; padding: .4rem .6rem; border-radius: 4px; cursor: pointer;
+    & a {
+      display: block;white-space: normal;color: #5d82a6;
+      & .page-title {font-weight: 600;}
+      & .header {font-size: .9em;margin-left: .25em;}
+    }
+    &:hover,
+    &.focused {
+      background-color: #f3f4f5;
+      & a {color: $color1;}
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  .search-box input {
+    cursor:pointer;
+    width: 0;
+    border-color: transparent;
+    position: relative;
+    &:focus {left: 0; width: 10rem; cursor: text;}
+  }
+}
+@media (max-width: 959px) and (min-width:719px) {
+  .search-box .suggestions {left:0}
+}
+
+@media (max-width: 719px) {
+  .search-box {
+    margin-right:0;
+    & input { left: 1rem; }
+    & .suggestions { right: 0; }
+  }
+}
+
+@media (max-width: 419px) {
+  .search-box {
+    & .suggestions {width:calc(100vw - 4rem);}
+    & input:focus { width: 8rem;}
+  }
+}

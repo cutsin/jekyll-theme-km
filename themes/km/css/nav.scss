@@ -1,0 +1,41 @@
+nav.nav {
+  z-index: 20; top:0; left:0; right: 0; position: fixed;
+  height: 3.6rem; padding: .7rem 1.5rem; line-height: 2.2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaecef;
+  & a {
+    display: inline-block;
+  }
+  & .logo {
+    position: relative;font-size: 1.3rem; font-weight: 600;
+    color: #2c3e50;text-decoration: none;
+  }
+  & .links {
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    white-space: nowrap;
+    font-size: .9rem;
+    position: absolute;
+    right: 1.5rem;
+    top: .7rem;
+    display: flex;
+    & .navs {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  nav.nav {
+    padding-left:4rem;
+    & .links {
+      padding-left: 1.5rem
+    }
+    & .search-box {
+      margin-right:0;
+      & input {left: 1rem;}
+    }
+  }
+}
