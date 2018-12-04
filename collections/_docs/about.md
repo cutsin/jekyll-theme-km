@@ -6,4 +6,8 @@ layout: default
 
 # About
 
-Us
+![image](/assets/images/1.svg) Find Us
+
+Formula:
+
+$$E=mc^2$$
