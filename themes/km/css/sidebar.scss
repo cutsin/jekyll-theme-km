@@ -22,6 +22,11 @@
   color: #999; transition: color .15s ease; font-size: 1.1em; font-weight: 700; padding: 0 1.5rem; margin-top: 0; margin-bottom: .5rem;
   &.open,
   &:hover {color: inherit;}
+  & > a {
+    color: #2c3e50;border-left: .25rem solid transparent;
+    &:hover {color: $color1}
+    &.active {font-weight: 600;color: $color1;border-left-color: $color1;}
+  }
 }
 
 a.sidebar-link {

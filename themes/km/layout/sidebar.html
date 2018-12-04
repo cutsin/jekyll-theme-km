@@ -1,6 +1,9 @@
 <div class="sidebar">
   <ul class="sidebar-links">
     <li>
+      <a href="/" class="sidebar-link{% if page.url == '/' %} active{% endif %}">Home</a>
+    <!--  -->
+    <li>
       {% assign folders = site.collections | sort: 'order' %}
       {% for folder in folders %}
         {% if folder.label != "posts" %}
@@ -11,12 +14,9 @@
           {% for doc in docs %}
           <li>
             <a href="{{doc.url}}" class="sidebar-link{% if page.url == doc.url %} active{% endif %}">{{ doc.title }}</a>
-          </li>
           {% endfor %}
-        </ul>
       </div>
         {% endif %}
       {% endfor %}
-  </ul>
 </div>
 <div class="sidebar-mask"></div>

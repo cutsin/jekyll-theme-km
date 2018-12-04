@@ -8,13 +8,14 @@
 ## Development
 
 ```sh
-docker-compose build --no-cache km-development
-docker-compose up -d km-development
+# docker-compose build --no-cache km-development
+docker-compose up -d --build km-development
 docker exec -it km sh
 ```
 
 ### Run
 
 ```sh
+bundle install
 jekyll serve --force_polling
 ```
