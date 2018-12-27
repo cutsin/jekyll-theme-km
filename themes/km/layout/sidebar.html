@@ -13,7 +13,7 @@
           {% assign docs = folder.docs | sort: 'chapter' %}
           {% for doc in docs %}
           <li>
-            <a href="{{doc.url}}" class="sidebar-link{% if page.url == doc.url %} active{% endif %}">{{ doc.title }}</a>
+            <a href="{{doc.url | relative_url}}" class="sidebar-link{% if page.url == doc.url %} active{% endif %}">{{ doc.title }}</a>
           {% endfor %}
       </div>
         {% endif %}
