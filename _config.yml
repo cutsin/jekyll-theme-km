@@ -15,6 +15,7 @@ collections:
 
 # Jekyll Folders
 # source: ./themes/km/
+baseurl: jekyll-theme-km
 collections_dir: ./collections
 layouts_dir: ./themes/km/layout
 includes_dir: ./themes/km/layout
