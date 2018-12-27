@@ -44,7 +44,7 @@ var showSug = function(matches) {
   }
   var html = matches.map(function(arr) {
     return [
-      '<li class="suggestion"><a href="./'+ arr[0] +'">',
+      '<li class="suggestion"><a href="{{ site.baseurl }}'+ arr[0] +'">',
         '<span class="page-title">'+ arr[2] +'</span>',
         '<span class="header">&gt; '+ arr[1] +'</span>',
       '</a>'
