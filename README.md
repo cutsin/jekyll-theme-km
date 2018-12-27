@@ -1,5 +1,7 @@
 # README.md
 
+A Knowledge Management Theme for Jekyll
+
 ## Site
 
 [127.0.0.1:9220](http://127.0.0.1:9220)
