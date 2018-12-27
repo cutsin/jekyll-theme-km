@@ -6,7 +6,7 @@ layout: default
 
 # About
 
-![image]({{ site.baseurl }}/assets/images/1.svg) Find Us
+![image](https://raw.githubusercontent.com/cutsin/jekyll-theme-km/master/assets/images/1.svg/assets/images/1.svg) Find Us
 
 Formula:
 
