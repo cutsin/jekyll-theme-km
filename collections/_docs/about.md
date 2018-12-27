@@ -6,7 +6,7 @@ layout: default
 
 # About
 
-![image](./assets/images/1.svg) Find Us
+![image](../assets/images/1.svg) Find Us
 
 Formula:
 
